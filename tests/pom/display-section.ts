@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 
-export default class DisplaySection {
+export class DisplaySection {
     readonly spanResult: Locator;
     readonly spanDisplay: Locator;
     readonly spanHistory: Locator;
@@ -11,7 +11,16 @@ export default class DisplaySection {
         this.spanHistory = page.getByTestId('ieUz0d');
     }
 
-    async validateTextDisplay(output : string) {
+    async validateExactTextDisplay(output : string) {
         await expect(this.spanDisplay).toHaveText(output);
+    }
+
+    async typeUsingKeybord(input : string) {
+        await this.spanDisplay.click();
+        const lastChar = input.length -1;
+        for(let i = 0; i<lastChar; i++) {
+            await this.spanDisplay.press(input[i]);
+        }
+        await this.spanDisplay.press('Enter');
     }
 }

@@ -1,6 +1,6 @@
 import { Locator, Page } from "@playwright/test";
 
-export default class CalculatorButtons {
+export class CalculatorButtons {
     readonly page: Page;
     private btn0: Locator;
     private btn1: Locator;
@@ -34,6 +34,7 @@ export default class CalculatorButtons {
         this.btn7 = page.getByTestId('rk7bOd');
         this.btn8 = page.getByTestId('T7PMFe');
         this.btn9 = page.getByTestId('XoxYJ');
+        this.btnEqual = page.getByTestId('Pt8tGc');
         this.btnErase = page.getByTestId('H7sWPd');
         this.btnOpenParenthesis = page.getByTestId('j93WEe');
         this.btnCloseParenthesis = page.getByTestId('qCp9A');
@@ -80,5 +81,15 @@ export default class CalculatorButtons {
         for(let i = 0; i < input.length; i++) {
             await this.clickOnCalculatorButton(input[i]);
         }
+    }
+
+    async erase(times: number){
+        for(let i = 0; i<times; i++){
+            await this.btnErase.click();
+        }
+    }
+
+    async eraseAll(){
+        await this.btnErase.click({delay: 1000});
     }
 }

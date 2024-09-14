@@ -1,13 +1,17 @@
 import { defineConfig, devices } from "@playwright/test";
+import { defineBddConfig } from 'playwright-bdd';
+
+const testDir = defineBddConfig({
+    //features: 'tests/features/**.feature',
+    features: 'tests/features/**.feature',
+    steps: ['tests/step-definitions/**.steps.ts', 'tests/fixtures/**.ts' ]
+});
 
 export default defineConfig({
-    //Define the test directory 
-    testDir: 'tests',
-    //Run test paralelly
+    //Define the test directory from bdd
+    testDir,
     fullyParallel: true,
-    //Define number of retries after a test failure
     retries: 0,
-    //Reporting options
     reporter: [
         //Generates a html page with test results
         ['html', {
@@ -19,11 +23,11 @@ export default defineConfig({
         }]
     ],
     use: {
-        headless: false,
-        //Define a base url
+        headless: true,
         baseURL: 'https://www.google.com/',
         //Define the custom test id attribute
         testIdAttribute: 'jsname',
+
         //Saves the trace, screenshot and video only on when tests fail
         trace: 'retain-on-failure',
         screenshot: 'only-on-failure',
@@ -33,7 +37,7 @@ export default defineConfig({
         navigationTimeout: 5000
     },
 
-    //Browsers used
+    //Browsers
     projects: [
         {
             name: 'chromium',
