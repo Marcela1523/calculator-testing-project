@@ -1,0 +1,15 @@
+{
+  "name": "calculator-testing-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Marcela1523/calculator-testing-project.git",
+  "author": "Marcela1523 <mendezguzman1523@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4"
+  },
+  "scripts": {
+    "test": "yarn playwright test"
+  }
+}
