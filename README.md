@@ -22,7 +22,8 @@ This constains basic tests, and it is intended to keep on increasing the coverag
 ```
 git clone copied_url
 ``` 
-8. Install all dependencies
+8. Access the calculator-testing-project folder
+9. Install all dependencies
 ```
 yarn install
 ```
@@ -52,14 +53,10 @@ yarn run test --headed
 When the execution has been completed, you can see the html report opening **playwright-report/index.html** file. 
 
 It will include a screenshoot, trace and video of each failed scenario for debugging purposes.
-<br/>
-<br/>
-![alt text](/assets/reporting.png)
 
 ## How is this project structured?
 The project structure is as follows: 
 - /.features-gen: This folder is auto-generated after running **yarn bddgen**.
-- /assets: Includes images of the README.md file.
 - /node_modules: Contains all dependencies, and it's created after running **yarn install**.
 - /playwright-report: Auto-generated after each test run, includes the html report, and if any test fails it will have its trace, screenshot and video.
 - /test-results: Auto-generated folder with the json test run report.
@@ -73,5 +70,3 @@ The project structure is as follows:
 - README.md: This files includes a brief explanation of the project.
 - yarn.lock: For tracking the versions of each dependency installed. 
 
-
-![alt text](/assets/structure.png)
