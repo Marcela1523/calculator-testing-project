@@ -57,7 +57,6 @@ It will include a screenshoot, trace and video of each failed scenario for debug
 ## How is this project structured?
 The project structure is as follows: 
 - /.features-gen: This folder is auto-generated after running **yarn bddgen**.
-- /assets: Includes images of the README.md file.
 - /node_modules: Contains all dependencies, and it's created after running **yarn install**.
 - /playwright-report: Auto-generated after each test run, includes the html report, and if any test fails it will have its trace, screenshot and video.
 - /test-results: Auto-generated folder with the json test run report.
