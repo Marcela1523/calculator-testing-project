@@ -15,11 +15,6 @@ This constains basic tests, and it is intended to keep on increasing the coverag
 1. Access the repository [calculator-testing-project](https://github.com/Marcela1523/calculator-testing-project)
 2. Click on "Code" button
 3. Select the way you would be cloning the repository
-<br/>
-<br/>
-![alt text](/assets/code-button.png)
-<br/>
-<br/>
 4. Copy the link
 5. Open a new terminal
 6. Change your location to the desired destination folder
