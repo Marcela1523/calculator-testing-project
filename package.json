@@ -1,0 +1,17 @@
+{
+  "name": "calculator-testing-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Marcela1523/calculator-testing-project.git",
+  "author": "Marcela1523 <mendezguzman1523@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4",
+    "playwright-bdd": "^7.4.0"
+  },
+  "scripts": {
+    "test": "yarn run bddgen && yarn run playwright test --project=chrome"
+  },
+  "dependencies": {}
+}
