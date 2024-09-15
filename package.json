@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "yarn run bddgen && yarn run playwright test --project=chrome",
-    "test cross-browsing": "yarn run bddgen && yarn run playwright test"
+    "cross-browsing-testing": "yarn run bddgen && yarn run playwright test"
   },
   "dependencies": {}
 }
