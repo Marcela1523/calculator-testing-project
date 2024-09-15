@@ -12,6 +12,6 @@ Feature: Remove character
     
     Scenario: Erasing the whole entry
         Given I enter "123+25" value in the the calculator
-        And I can see "123+25" text in the calculator screen
+        And I can see "123 + 25" text in the calculator screen
         When I remove all digits
         Then I can see "0" text in the calculator screen        
