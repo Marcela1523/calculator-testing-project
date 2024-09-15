@@ -11,7 +11,8 @@
     "playwright-bdd": "^7.4.0"
   },
   "scripts": {
-    "test": "yarn run bddgen && yarn run playwright test --project=chrome"
+    "test": "yarn run bddgen && yarn run playwright test --project=chrome",
+    "cross-browsing-testing": "yarn run bddgen && yarn run playwright test"
   },
   "dependencies": {}
 }
