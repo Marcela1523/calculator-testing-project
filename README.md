@@ -17,7 +17,7 @@ This constains basic tests, and it is intended to keep on increasing the coverag
 3. Select the way you would be cloning the repository
 <br/>
 <br/>
-![alt text](assets/code-button.png)
+![alt text](/assets/code-button.png)
 <br/>
 <br/>
 4. Copy the link
